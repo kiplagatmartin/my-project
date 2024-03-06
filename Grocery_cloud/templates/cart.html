@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block head_title %}my_cart{% endblock %}</title>
+</head>
+<body>
+<h1>Yor shopping cart</h1>
+<div>
+    {% for item in cart_items %}
+        <div>
+        <p>{{ item.product.name }}quantity: {{ item.quantity }})</p>
+        <p>Price: Ksh{{ item.product.price }}</p>
+            <a href="{% url 'cart: remove_from_cart' product_id %}">Remove</a>
+        </div>
+    {% endfor %}
+    <p>Total Price : ksh{{ total_price }}</p>
+{}
+    <button class="btn-success">Purchase</button>
+    <button><a href="{% url 'shamba:product_list' %}">continue_shopping</a></button>
+</div>
+</body>
+</html>

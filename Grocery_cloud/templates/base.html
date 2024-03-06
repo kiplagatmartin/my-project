@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}base{% endblock %}</title>
+    <link rel="stylesheet" href="jetbrains://pycharm/navigate/reference?project=farmcloud&path=shamba/css/bootstrap.css">
+</head>
+<style>
+    body{
+        background-color: dimgrey;
+    }
+  
+    a{
+        color: black;
+    }
+    #navigation {
+        border: none;
+        background-color: crimson;
+        border-radius: 8px;
+        float: right;
+        text-align: center;
+        padding-right: 40px;
+
+    }
+   
+    #clicks li{
+        list-style-type: none;
+        display: inline-block;
+        color: black;
+    }
+
+    #clicks a {
+        text-decoration: none;
+        padding-right: 20px;
+
+    }
+    #clicks a:hover{
+        color: bisque;
+    }
+
+ 
+</style>
+
+<body>
+    <nav>
+        <div id="navigation">
+           
+            <ul id="clicks">
+                <li><a href="/items/">Home</a></li>
+                <li><a href="/cart/">cart</a></li>
+                <li><a href="/">me</a></li>
+            </ul>
+             
+        </div>
+    </nav>
+
+
+</body>
+
+</html>
